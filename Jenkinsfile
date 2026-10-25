@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -11,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing Mini DevOps Project'
-                sh 'test -f index.html'
+                bat 'if exist index.html (echo HTML file found) else (exit 1)'
             }
         }
     }
