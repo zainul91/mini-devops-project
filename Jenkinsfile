@@ -6,6 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building Mini DevOps Project'
+                bat 'docker build -t mini-devops-app:1.0 .'
             }
         }
 
